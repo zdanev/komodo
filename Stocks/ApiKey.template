@@ -1,0 +1,9 @@
+// TODO: rename to ApiKey.cs
+
+namespace Stocks
+{
+    public static class ApiKey
+    {
+        public static string AlphavantageApiKey = "YOUR API KEY";
+    }
+}
