@@ -16,7 +16,7 @@ namespace Komodo.Weather
 
         public Clouds Clouds { get; set; }
 
-        int DT { get; set; } // ?
+        public int DT { get; set; } // ?
 
         public Sys Sys { get; set; }
 

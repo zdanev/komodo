@@ -12,11 +12,14 @@ namespace Komodo.Weather
         {
             var param = "92656";
             var service = new WeatherService();
+
+            WriteSubtleLine($"Getting weather for {param}...");
             
             var model = await service.GetWeather(param);
             
-            Console.WriteLine($"{model.Name}: {model.Weather[0].Description}");
-            Console.WriteLine($"Temp: {model.Main.Temp.KtoF()}F (min: {model.Main.Temp_Min.KtoF()}F, max: {model.Main.Temp_Max.KtoF()}F)");
+            ClearPrevConsoleLine();
+            WriteHighlightLine($"{model.Name}: {model.Weather[0].Description}");
+            WriteLine($"Temp: {model.Main.Temp.KtoF()}F (min: {model.Main.Temp_Min.KtoF()}F, max: {model.Main.Temp_Max.KtoF()}F)");
         }
     }
 }
