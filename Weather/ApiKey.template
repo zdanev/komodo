@@ -1,0 +1,12 @@
+// TODO: go to http://openweathermap.org/appid to get api key
+
+// TODO: rename to ApiKey.cs
+
+namespace Komodo.Weather
+{
+
+    public class ApiKey
+    {
+        public static string OpenWeatherMapApiKey = "YOUR API KEY";
+    }
+}
