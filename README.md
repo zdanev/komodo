@@ -8,21 +8,21 @@ Drop me a line to get involved!
 
 ### Weather
 
-```
+```cmd
 weather
 weather 92656
 ```
 
 ### Stocks
 
-```
+```cmd
 stocks
 stocks AAPL MSFT GOOG
 ```
 
 ### CNN
 
-```
+```cmd
 cnn
 cnn world
 cnn us
@@ -32,20 +32,20 @@ cnn travel
 
 ### RSS news
 
-```
+```cmd
 news
 ```
 
 ### Google/Bing
 
-```
+```cmd
 google komodo
 bing dragon
 ```
 
 ### Twitter
 
-```
+```cmd
 twits
 twits #hash
 twit @somebody something

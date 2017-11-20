@@ -13,8 +13,6 @@ namespace Komodo.Cnn
 
         public async Task<FeedItem[]> GetStories()
         {
-            try
-            {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(url);
@@ -37,21 +35,20 @@ namespace Komodo.Cnn
 
                 return feedItems.ToArray();
             }
-            }
-            catch (Exception ex)
-            {
-                WriteLine(ex.Message, Style.Error);
-                return null;
-            }
         }
 
         private DateTime ParseDate(string date)
         {
             DateTime result;
+            
             if (DateTime.TryParse(date, out result))
+            {
                 return result;
+            }
             else
+            {
                 return DateTime.MinValue;
+            }
         }
     }
 }

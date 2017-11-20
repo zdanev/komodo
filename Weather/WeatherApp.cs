@@ -2,6 +2,8 @@ using System;
 using System.Threading.Tasks;
 using Komodo.Common;
 
+using static Komodo.Common.ConsoleHelper;
+
 namespace Komodo.Weather
 {
     public class WeatherApp : ConsoleApp
@@ -13,12 +15,12 @@ namespace Komodo.Weather
             var param = "92656";
             var service = new WeatherService();
 
-            WriteSubtleLine($"Getting weather for {param}...");
+            WriteLine($"Getting weather for {param}...", Style.Subtle);
             
             var model = await service.GetWeather(param);
             
             ClearPrevConsoleLine();
-            WriteHighlightLine($"{model.Name}: {model.Weather[0].Description}");
+            WriteLine($"{model.Name}: {model.Weather[0].Description}", Style.Highlight);
             WriteLine($"Temp: {model.Main.Temp.KtoF()}F (min: {model.Main.Temp_Min.KtoF()}F, max: {model.Main.Temp_Max.KtoF()}F)");
         }
     }

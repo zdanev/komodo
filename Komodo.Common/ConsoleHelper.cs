@@ -57,6 +57,32 @@ namespace Komodo.Common
             Console.SetCursorPosition(0, currentLineCursor);
             Console.Write(new string(' ', Console.WindowWidth));
             Console.SetCursorPosition(0, currentLineCursor);
-        }        
+        }  
+        
+        public static void WordWrap(string s)
+        {
+            int w = 0;
+            var words = s.Split(' ');
+
+            foreach (var word in words)
+            {
+                if (w + word.Length > 80) // todo: setting
+                {
+                    w = 0;
+                    Console.WriteLine("");
+                }
+
+                Write(word + " ");
+
+                w += word.Length;
+            }
+
+            Console.WriteLine("");
+        }     
+
+        public static void NewLine()
+        {
+            Console.WriteLine();
+        }
     }
 }

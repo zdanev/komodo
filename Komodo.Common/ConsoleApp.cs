@@ -32,30 +32,5 @@ namespace Komodo.Common
         {
             Console.WriteLine("Copyright (c) " + DateTime.Now.Year);
         }
-
-        public virtual void WriteLine(string s)
-        {
-            ConsoleHelper.WriteLine(s);
-        }
-
-        public virtual void WriteSubtleLine(string s)
-        {
-            ConsoleHelper.WriteLine(s, ConsoleHelper.Style.Subtle);
-        }
-
-        public virtual void WriteHighlightLine(string s)
-        {
-            ConsoleHelper.WriteLine(s, ConsoleHelper.Style.Highlight);
-        }
-
-        public virtual void WriteError(string error)
-        {
-            ConsoleHelper.WriteLine(error, ConsoleHelper.Style.Error);
-        }
-
-        public virtual void ClearPrevConsoleLine()
-        {
-            ConsoleHelper.ClearPrevConsoleLine();
-        }
     }
 }
